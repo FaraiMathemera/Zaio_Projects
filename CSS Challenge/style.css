@@ -68,6 +68,9 @@ buttonph {
   text-decoration: none;
 }
 
+html{
+zoom: 110%;}
+
 input{ 
   border-radius: 20px;
   border-style: solid;
