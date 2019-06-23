@@ -67,14 +67,14 @@
 	<!--Password -->
     	<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock fa-4x" style="color:#660033"></i> </span>
-			<input name="passwordcreate" placeholder="Create password" type="password">
+			<input name="passwordcreate" placeholder="Create password" type="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 		</div7>
         
 	
 	<!--Confirm Password -->
     	<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock fa-4x" style="color:#660033"></i> </span>
-			<input name="passwordconfirm" placeholder="Confirm password" type="password">
+			<input name="passwordconfirm" placeholder="Confirm password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
 		</div7>
         
     <label>By sign up/ login you agree with our <a href=""><a1 href ="" class="link">Terms</a1></a>, <a href=""><a1 href="">Privacy Policy</a1></a> and <a href=""><a1 href="">Cookie Policy</a1></a></label>                                 
