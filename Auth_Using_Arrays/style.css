@@ -44,30 +44,6 @@ container {
   
 }
 
-buttonfb { 
-  padding: 20px;
-  color: white;
-  background-color:  #4267b2;
-  padding: 40px 80px;
-  border-style: solid;
-  border-radius: 80px;
-  border-color: #4267b2;  
-  font-size: 50px;
-  text-decoration: none;
-}
-
-buttonph { 
-  padding: 20px;
-  color: LightGrey;
-  background-color:  #00000;
-  padding: 40px 60px;
-  border-radius: 80px;
-  border-style: solid;
-  border-color: LightGrey;
-  font-size: 42px;
-  text-decoration: none;
-}
-
 html{
 zoom: 110%;}
 
@@ -78,6 +54,16 @@ input{
   padding: 30px 100px;
   border-width: thin;
   box-shadow: 5px 5px 10px;
+}
+
+input2{ 
+  border-radius: 20px;
+  border-style: solid;
+  border-color: LightGrey;
+  padding: 30px 100px;
+  border-width: thin;
+  box-shadow: 5px 5px 10px;
+  
 }
 
 input1{ 
@@ -130,12 +116,12 @@ div3 {
 div7 {
    margin-right:auto;
   margin-left:0;
-  padding-left: 0px;
+  padding-top: 15px;
+   padding-bottom: 15px;
+   padding-right: 100px;
+   padding-left: 100px;
   text-align:center;
 }
-
-body { padding: 2em; }
-
 
 /* Shared */
 .loginBtn {
@@ -204,3 +190,5 @@ body { padding: 2em; }
 .loginBtn--google:focus {
   background: #E74B37;
 }
+
+.fa fa-user{width: 100px; height: 100px}
