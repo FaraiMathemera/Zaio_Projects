@@ -40,7 +40,7 @@ card1{
 }
 
 container {
-  padding: 100px 100px;
+  padding: 10px 10px;
   
 }
 
@@ -51,9 +51,25 @@ input{
   border-radius: 20px;
   border-style: solid;
   border-color: LightGrey;
-  padding: 30px 100px;
+  padding: 30px 50px;
   border-width: thin;
   box-shadow: 5px 5px 10px;
+  font-size: 40px;
+  height: 100px;
+  width: 600px;
+}
+input[type="text"]
+{
+    font-size:36px;
+}
+
+input[type="password"]
+{
+    font-size:36px;
+}
+input[type="email"]
+{
+    font-size:36px;
 }
 
 input2{ 
@@ -75,8 +91,6 @@ input1{
   width: 50px;
 }
 
-button4 {
-}
 
 img {
   width: 50%;
@@ -114,13 +128,12 @@ div3 {
 }
 
 div7 {
-   margin-right:auto;
-  margin-left:0;
+margin: auto;
+  width: 75%;
   padding-top: 15px;
    padding-bottom: 15px;
-   padding-right: 100px;
-   padding-left: 100px;
-  text-align:center;
+   padding-right: 50px;
+   padding-left: 20px;
 }
 
 /* Shared */
