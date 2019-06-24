@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script type="text/javascript" src="js.js"></script>
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 </head>
 <body>
@@ -38,58 +39,53 @@
 	
 	<hs>SIGN UP</hs>
 	
-		
+	<form id="signup" >	
 	<!--Name-->
 		<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user fa-4x" style="color:#660033" pattern="[A-Za-z\s]+"></i> </span>
-			<input type="text" name="name" placeholder="Name">
+			<input type="text" id="name" name="name" placeholder="Name">
 		</div7>  
 		 
 	<!--Surname-->
 		<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user fa-4x" style="color:#660033" pattern="[A-Za-z\s]+"></i> </span>
-			<input name="" placeholder="Surname" type="text">
+			<input name="surname" id="surname" placeholder="Surname" type="text">
 		</div7>
 		
 	<!--Age-->
 		<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user fa-4x" style="color:#660033"></i> </span>
-			<input name="" placeholder="Age" type="number"  min="18" max="120" placeholder ="Age" title="you have to be 18 or older">
+			<input name="age" id="age" placeholder="Age" type="number"  min="18" max="120" placeholder ="Age" title="you have to be 18 or older">
 		</div7>
 		
 	<!--Email-->
     	<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope fa-4x" style="color:#660033"></i> </span>
-			<input name="" placeholder="Email address" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="enter a valid email address">
+			<input name="emailad" id="emailad" placeholder="Email address" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="enter a valid email address">
 		 </div7>
  
 	
 	<!--Password -->
     	<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock fa-4x" style="color:#660033"></i> </span>
-			<input name="passwordcreate" placeholder="Create password" type="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="8 or more characters">
+			<input name="passwordcreate" id="passwordcreate" placeholder="Create password" type="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="8 or more characters">
 		</div7>
         
 	
 	<!--Confirm Password -->
     	<div7 class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock fa-4x" style="color:#660033"></i> </span>
-			<input name="passwordconfirm" placeholder="Confirm password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="8 or more characters">>
+			<input name="passwordconfirm" id="passwordconfirm" placeholder="Confirm password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="8 or more characters">>
 		</div7>
-        
-    <label>By sign up/ login you agree with our <a href=""><a1 href ="" class="link">Terms</a1></a>, <a href=""><a1 href="">Privacy Policy</a1></a> and <a href=""><a1 href="">Cookie Policy</a1></a></label>                                 
+		
+		<label>By sign up/ login you agree with our <a href=""><a1 href ="" class="link">Terms</a1></a>, <a href=""><a1 href="">Privacy Policy</a1></a> and <a href=""><a1 href="">Cookie Policy</a1></a></label>                                 
 	<div class="row">
-    <div1>
-    <a href="#">
-		  <input type="image" src="apple_logo.png" alt="Submit" width="300" height="150">
-    </a>
-    </div1>
-    <div2>
-    <a href="#">
-		  <input type="image" src="play_logo.png" alt="Submit" width="300" height="150">
-    </a>
-    </div2>
+    <input onclick="myFunction()" type="submit" value="Submit">
+	
 	</div>
+		</form>
+        
+    
 	
   </card1>
 </div>
