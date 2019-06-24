@@ -44,8 +44,9 @@ container {
   
 }
 
-html{
-zoom: 110%;}
+input:focus { 
+  border-color: #660033;
+}
 
 input{ 
   border-radius: 20px;
@@ -61,6 +62,16 @@ input{
 input[type="text"]
 {
     font-size:36px;
+	
+}
+
+input[type="submit"]
+{
+    font-size:46px;
+	border-color: #660033;
+	color: #660033;
+	font-weight: bold;
+	padding: 10px 10px;
 }
 
 input[type="password"]
@@ -68,6 +79,11 @@ input[type="password"]
     font-size:36px;
 }
 input[type="email"]
+{
+    font-size:36px;
+}
+
+input[type="number"]
 {
     font-size:36px;
 }
@@ -131,7 +147,7 @@ div7 {
 margin: auto;
   width: 75%;
   padding-top: 15px;
-   padding-bottom: 15px;
+   padding-bottom: 25px;
    padding-right: 50px;
    padding-left: 20px;
 }
