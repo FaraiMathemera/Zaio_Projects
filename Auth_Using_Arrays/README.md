@@ -1,7 +1,7 @@
-Auth Using Arrays
+# Auth Using Arrays
 
-Features:
+## Features:
 -Simple HTML, CSS and JS
 
-Issues:
+## Issues:
 - HTML Validation using "pattern" not working.
