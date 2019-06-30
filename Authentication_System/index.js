@@ -1,38 +1,46 @@
 const express = require('express');
-const path = require('path');
-//init app
+const expressLayouts = require('express-ejs-layouts');
 const index = express();
-//load view engine
-index.set('views', path.join(__dirname,'views'));
-index.set('view engine', 'pug');
-//Home route
-index.get('/', function(req, res){
-let profiles = [
-{
-  id:1,
-  name:'James',
-  surname:'Blunt',
-  age:23
-},
-{
-  id:2,
-  name:'Jim',
-  surname:'Smoke',
-  age:28
-},
-{
-  id:3,
-  name:'Joe',
-  surname:'Dough',
-  age:33
-}];
-res.render('index', {profiles:profiles});
+const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+
+require('./config/passport')(passport);
+
+//DB Config
+const db = require('./config/keys').MongoURI;
+//Connect to mongodb
+mongoose.connect(db, { useNewUrlParser: true })
+  .then(() => console.log('MongoDB Conected ...'))
+  .catch(err => console.log(err));
+//ejs
+index.use(expressLayouts);
+index.set('view engine', 'ejs');
+//BodyParser middleware
+index.use(express.urlencoded({extended: false}));
+//Express session middleware
+index.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+//Passport middleware
+index.use(passport.initialize());
+index.use(passport.session());
+//Connect flash
+index.use(flash());
+//global vars
+index.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
 });
-//add route
-index.get('/profiles/add', function(req, res){
-res.render('add_profile', {title:"Add Profile"});
-});
-//Start server
-index.listen(3000, function(){
-  console.log('Server started on port 3000');
-});
+///routes
+index.use('/', require('./routes/index'));
+index.use('/users', require('./routes/users'));
+
+const PORT = process.env.PORT|| 5000;
+
+index.listen(PORT, console.log(`Server started on port ${PORT}`));
