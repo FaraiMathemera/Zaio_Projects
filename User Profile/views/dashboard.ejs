@@ -1,0 +1,59 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome you are logged in <%= name %></p>
+
+  <form action="/users/register" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="name"
+        id="name"
+        name="name"
+        class="form-control"
+        value="<%= name %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname</label>
+      <input
+        type="surname"
+        id="surname"
+        name="surname"
+        class="form-control"
+        value="<%= surname %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        type="age"
+        id="age"
+        name="age"
+        class="form-control"
+        value="<%= age %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="degree">Degree</label>
+      <input
+        type="degree"
+        id="degree"
+        name="degree"
+        class="form-control"
+        value="<%= degree %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="favCourse">Favourite Course</label>
+      <input
+        type="favCourse"
+        id="favCourse"
+        name="favCourse"
+        class="form-control"
+        value="<%= favCourse %>"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+      Save
+    </button>
+  </form>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
