@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 //user model
-const User = require('../models/User');
+let User = require('../models/User');
 
 //Login Page
 router.get('/login', (req,res) => res.render('login'));
@@ -12,7 +12,7 @@ router.get('/login', (req,res) => res.render('login'));
 router.get('/register', (req,res) => res.render('register'));
 
 //Dashboard Page
-router.get('/dashboard', (req,res) => res.render('dashboard'));
+router.get('/dashboard/edit', (req,res) => res.render('dashboard'));
 
 //Register handle
 router.post('/register', (req, res) => {
@@ -88,10 +88,10 @@ bcrypt.genSalt(10,(err, salt) =>
 });
 
 //Update handle -----------------------------------------------
-router.post('/dashboard',(req, res) =>{
+router.post('/dashboard/:id',(req, res) =>{
 var item = {_id, name, surname, age, email, degree,favCourse} = req.body;
-
 let errors =[];
+let query = {_id:req.body._id}
 //Check required fields
 if(!name||!surname||!age){
   errors.push({msg: 'Please fill in required fields'});
@@ -110,13 +110,12 @@ res.render('dashboard', {
 }else {
   //Validation Passed
   //Update user
-  User.findOneAndReplace({_id:_id},{$set: {item}},function(err, result){
-console.log(item);
-  });
-
-
+  User.updateOne(query,{$set:item}, {multi: true},function(err, result){
+req.flash('success_msg', 'You have updated your details!!');
+res.redirect('/users/dashboard/edit');
+console.log(query);
+});
 }
-
 });
 //Udate handle ---------------------------------------------
 //Login handle
@@ -127,8 +126,6 @@ passport.authenticate('local', {
   failureFlash: true
 })(req, res, next);
 });
-
-
 
 //Logout handle
 router.get('/logout', (req, res) => {
