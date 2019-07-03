@@ -1,0 +1,29 @@
+.b {
+    display: block;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 600px;
+    height: 100px;
+    background-color: white;
+    align: middle;
+    border-style: solid;
+    box-sizing: border-box;
+    
+}
+.b1 {
+    display: inline;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 600px;
+    height: 350px;
+    align: left;
+    background-color: white;
+    border-style: solid;
+}
+div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
