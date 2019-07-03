@@ -11,6 +11,9 @@ router.get('/login', (req,res) => res.render('login'));
 //Register Page
 router.get('/register', (req,res) => res.render('register'));
 
+//Dashboard Page
+router.get('/dashboard', (req,res) => res.render('dashboard'));
+
 //Register handle
 router.post('/register', (req, res) => {
 const {name, surname, age, email, password, password2} = req.body;
@@ -84,17 +87,19 @@ bcrypt.genSalt(10,(err, salt) =>
 }
 });
 
-//Update handle
-router.post('/dashboard', (req, res) => {
-const {name, surname, age, degree, favCourse} = req.body;
+//Update handle -----------------------------------------------
+router.post('/dashboard',(req, res) =>{
+var item = {_id, name, surname, age, email, degree,favCourse} = req.body;
+
 let errors =[];
 //Check required fields
-if(!name||!surname||!age||!degree||!favCourse){
-  errors.push({msg: 'Please make sure all fields are entered'});
+if(!name||!surname||!age){
+  errors.push({msg: 'Please fill in required fields'});
 }
 
-if (errors.length>0){
+if(errors.length > 0){
 res.render('dashboard', {
+  _id,
   errors,
   name,
   surname,
@@ -103,11 +108,17 @@ res.render('dashboard', {
   favCourse
 });
 }else {
-//update script
-User.
-}
-});
+  //Validation Passed
+  //Update user
+  User.findOneAndReplace({_id:_id},{$set: {item}},function(err, result){
+console.log(item);
+  });
 
+
+}
+
+});
+//Udate handle ---------------------------------------------
 //Login handle
 router.post('/login', (req, res, next) =>{
 passport.authenticate('local', {

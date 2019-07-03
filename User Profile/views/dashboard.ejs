@@ -1,7 +1,17 @@
 <h1 class="mt-4">Dashboard</h1>
 <p class="lead mb-3">Welcome you are logged in <%= name %></p>
-
-  <form action="/users/register" method="POST">
+<% include ./partials/messages %>
+  <form action="/users/dashboard" method="POST">
+    <div class="form-group">
+      <label for="_id">ID</label>
+      <input
+        type="_id"
+        id="_id"
+        name="_id"
+        class="form-control"
+        value="<%= _id %>"
+      />
+    </div>
     <div class="form-group">
       <label for="name">Name</label>
       <input
@@ -20,6 +30,16 @@
         name="surname"
         class="form-control"
         value="<%= surname %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control"
+        value="<%= email %>"
       />
     </div>
     <div class="form-group">
