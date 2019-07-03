@@ -26,3 +26,6 @@ $ npm run dev
 - Encrypted passwords
 
 ## Issues:
+
+## Database:
+- Open "config/keys.js" and add your MongoDB URI, local or Atlas
