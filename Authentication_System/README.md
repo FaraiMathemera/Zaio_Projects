@@ -1,9 +1,17 @@
 # Authentication System Challenge
 
 ## Instructions:
-- from terminal in the root folder of project run command "npm run dev"
-- Open localhost:5000 in browser
+```sh
+$ npm install
+```
 
+```sh
+$ npm start
+# Or run with Nodemon
+$ npm run dev
+
+# Visit http://localhost:5000
+```
 ## Technologies:
 - HTML
 - CSS (Bootstrap)
@@ -16,3 +24,6 @@
 - Encrypted passwords
 
 ## Issues:
+
+## Database:
+- Open "config/keys.js" and add your MongoDB URI, local or Atlas
