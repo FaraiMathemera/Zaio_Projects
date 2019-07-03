@@ -1,6 +1,6 @@
 # Authentication System Challenge
 
-## Instructions:
+
 ## Instructions:
 ```sh
 $ npm install
