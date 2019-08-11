@@ -45,9 +45,10 @@
 	<label>Your Custom Fit</label>
 	</div>
 	<div>
-	<buttonnumber class="button" id="number">0</buttonnumber>
+	<buttonnumber class="button" id="quantity1">0</buttonnumber>
 	<button class="buttoncart" id="cart" data-toggle="modal" data-target="#myModal">Add to Cart</buttoncart>
 	</div>
+	
 	
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -60,7 +61,7 @@
           <h4 class="modal-title">Please add the quantity of the item you selected</h4>
         </div>
         <div class="modal-body">
-        <label id="modalcolour"></label><button id="add" class="button1" style="background-color:white;" onclick="myFunctionadd()"></button><label id="quantity">0</label><button id="minus" class="button1" style="background-color:white;" onclick="myFunctionminus()"></button>
+        <label id="modalcolour"></label><button id="add" class="buttonModal" style="background-color:black;" onclick="myFunctionminus()"> - </button><label id="quantity">0</label><button id="minus" class="buttonModal" style="background-color:black;" onclick="myFunctionadd()"> + </button>
         </div>
         <div class="modal-footer">
 		  <button type="button" class="btn btn-default" data-dismiss="modal">Agree</button>
@@ -75,9 +76,10 @@
   
 	<hr>
 	<div>
-	<label>DETAILS</label>
 	<hr>
+	<label>DETAILS</label>
 	</div>
+	<hr>
 	<div>
 	<label>Need Help?</label><br>
 	<label>Shipping & Returns</label>
