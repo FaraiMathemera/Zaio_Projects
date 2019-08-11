@@ -12,6 +12,14 @@ hs {
   font-weight: bold;
   padding-bottom: 20px;
 }
+h4 {
+  color: black;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
 label {
   color: black;
   padding-bottom: 20px;
@@ -114,6 +122,20 @@ labelPrice{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 8px 8px;
+  border-radius: 50%;
+}
+
+.buttonModal {
+  border-style: solid;
+  border-color: Grey;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 900;
   margin: 8px 8px;
   border-radius: 50%;
 }
