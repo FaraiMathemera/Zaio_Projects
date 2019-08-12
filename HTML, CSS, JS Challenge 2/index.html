@@ -16,6 +16,8 @@
 <div class="container">
 
 	<hs>HICKIES Original</hs>
+	
+	<!-- Review Section-->
 	<label>
 	<span class="fa fa-star checked"></span>
 	<span class="fa fa-star checked"></span>
@@ -23,6 +25,8 @@
 	<span class="fa fa-star"></span>
 	<span class="fa fa-star"></span>
 	<a href=""><a1 href ="" class="link">1,293 Reviews</a1></a></label>
+	<!-- SEnd of Review Section-->
+	
 	<div>
 	<labelPrice><strong>$14.99</strong></labelPrice><labelLight>$17.99</labelLight><labelLight>25% OFF</labelLight>
 	</div>
@@ -32,6 +36,7 @@
 	<div>
 	<label><strong>COLOR:</strong></label><label id="colour">Arctic White</label>
 	</div>
+	<!-- Start of colour Selector-->
 	<div>
 	<button id="colour1" class="button1" style="background-color:white;" onclick="myFunction1()"></button><button id="colour2" class="button1" style="background-color:honeydew;" onclick="myFunction2()"></button>
 	<button id="colour3" class="button1" style="background-color:coral;" onclick="myFunction3()"></button><button id="colour4" class="button1" style="background-color:salmon;" onclick="myFunction4()"></button>
@@ -40,6 +45,7 @@
 	<button id="colour9" class="button1" style="background-color:peru;" onclick="myFunction9()"></button><button id="colour10" class="button1" style="background-color:sienna;" onclick="myFunction10()"></button>
 	<button id="colour11" class="button1" style="background-color:navy;" onclick="myFunction11()"></button><button id="colour12" class="button1" style="background-color:black;" onclick="myFunction12()"></button>
 	</div>
+	<!-- End of Modal content-->
 	<div>
 	<label>Size Guide</label><br>
 	<label>Your Custom Fit</label>
@@ -52,38 +58,40 @@
 	
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="width:900px;">
     
-      <!-- Modal content-->
+      <!-- Start of Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Please add the quantity of the item you selected</h4>
+          <h2>Please add the quantity of the item you selected</h2>
         </div>
         <div class="modal-body">
+		<!-- increase and decrease buttons-->
         <label id="modalcolour"></label><button id="add" class="buttonModal" style="background-color:black;" onclick="myFunctionminus()"> - </button><label id="quantity">0</label><button id="minus" class="buttonModal" style="background-color:black;" onclick="myFunctionadd()"> + </button>
+		<!-- End of quantity buttons-->
         </div>
         <div class="modal-footer">
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Agree</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		  <button type="button" class="modalbutton" data-dismiss="modal" style="background-color:green;" onclick="myFunctionAgree()">Agree</button>
+          <button type="button" class="modalbutton" data-dismiss="modal" style="background-color:red;" onclick="myFunctionCancel()">Cancel</button>
         </div>
       </div>
 	  <!-- End of modal content--> 
     </div>
+	
   </div>
   <!-- End of Modal -->
-  
-  
 	<hr>
 	<div>
-	<hr>
 	<label>DETAILS</label>
 	</div>
 	<hr>
 	<div>
+	<hr>
 	<label>Need Help?</label><br>
 	<label>Shipping & Returns</label>
 	</div>
+	
 
 </div>
 </body>
