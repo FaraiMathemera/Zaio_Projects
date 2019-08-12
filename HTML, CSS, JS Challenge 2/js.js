@@ -57,13 +57,25 @@ function myFunctionadd() {
   quantity = quantity + 1;
   document.getElementById("quantity").innerHTML = quantity;
   document.getElementById("quantity1").innerHTML = quantity;
-  document.getElementById("cart").innerHTML = "Check out now ($"+ (quantity*14.99) +")";
   }
 //Function to decrease number in cart
 function myFunctionminus() {
   quantity = quantity - 1;
+  
+  //Make sure quantity is not less than 0
   if (quantity < 0)
   {quantity = 0;}
+  
+  document.getElementById("quantity").innerHTML = quantity;
+  document.getElementById("quantity1").innerHTML = quantity;
+  }
+  
+function myFunctionAgree() {
+  document.getElementById("cart").innerHTML = "Check out now ($"+ (quantity*14.99) +")";
+  }
+  
+function myFunctionCancel() {
+  quantity = 0;
   document.getElementById("quantity").innerHTML = quantity;
   document.getElementById("quantity1").innerHTML = quantity;
   }
