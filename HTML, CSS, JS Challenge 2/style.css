@@ -8,7 +8,7 @@ hs {
   color: black;
   margin-left: 20px;
   text-align: center;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bold;
   padding-bottom: 20px;
 }
@@ -29,7 +29,7 @@ label {
 labelLight{
   color: grey;
   padding: 10px 20px;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -126,6 +126,18 @@ labelPrice{
   border-radius: 50%;
 }
 
+.modalbutton {
+  border-style: solid;
+  border-color: Grey;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 8px 8px;
+  border-radius: 20%;
+}
+
 .buttonModal {
   border-style: solid;
   border-color: Grey;
@@ -150,8 +162,8 @@ img {
 div {
    display: block;
   margin: 0 auto;
-   padding-top: 55px;
-   padding-bottom: 55px;
+   padding-top: 18px;
+   padding-bottom: 18px;
    text-align:left;
 }
 div1 {
